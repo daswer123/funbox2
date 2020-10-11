@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# funbox2
+Вакансия разработчика JavaScript "Junior". Тестовое задание для компании FunBox.
 
 ## Available Scripts
 
