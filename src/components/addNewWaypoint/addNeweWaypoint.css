@@ -11,6 +11,10 @@
     border: 2px solid #EFEFEF;
 }
 
+.waypoints--add-form input:hover{
+    border-color:  #cacaca;
+}
+
 .add-btn{
     border: 0;
     color: white;
@@ -26,6 +30,12 @@
 
     user-select: none;
     cursor: pointer;
+}
+
+.add-btn:hover,
+.add-btn:focus,
+.add-btn:active{
+    background-color: #2eb87c;
 }
 
 .waypoints--item{

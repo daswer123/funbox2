@@ -4,14 +4,16 @@ import {setWaypoint, addNewWaypoints, setPath, changeWaypointDestination} from "
 import { GoogleMap, Marker, InfoWindow, useLoadScript} from "@react-google-maps/api";
 import { DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 
+import key from "../../key";
+
 import "./map.css"
 
 
 // Иницируем карту и задаём ей изначальные параметры
 const  libraries = ["places"];
 const center = {
-    lat : 55.773725,
-    lng : 38.438944
+    lat : 55.754941,
+    lng : 37.655386
 }
 
 //
@@ -21,7 +23,7 @@ const Map = ({
     
     //Создаём загрузку и проверям загрузку на ошибку
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "AIzaSyD6-lNhd5SHFeIZM6DKpLlj1f6U2KdYXbQ",
+        googleMapsApiKey : key.googleKey,
         libraries
     });
 
