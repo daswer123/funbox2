@@ -1,0 +1,54 @@
+.map{
+    width: 800px;
+    height: 96vh;
+
+    border-radius: 15px;
+}
+
+@media(max-width : 1300px){
+    .map{
+        width: 600px;
+        height: 96vh;
+    
+        border-radius: 15px;
+    }
+}
+
+
+@media(max-width : 1100px){
+    .map{
+        width: 500px;
+        height: 96vh;
+    
+        border-radius: 15px;
+    }
+}
+
+
+@media(max-width : 900px){
+    .map{
+        width: 400px;
+        height: 96vh;
+    
+        border-radius: 15px;
+    }
+
+    .map{
+        margin-left: 20px;
+        margin-right: 20px;
+    
+        width: 100%;
+      }
+}
+
+
+@media(max-width : 850px){
+
+    .map{
+        margin-left: 0px;
+        margin-right: 10px;
+    
+        width: 100%;
+      }
+}
+

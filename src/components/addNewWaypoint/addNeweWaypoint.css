@@ -1,0 +1,53 @@
+.waypoints--add-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.waypoints--add-form input{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border: 2px solid #EFEFEF;
+}
+
+.add-btn{
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #4DD599;
+
+    padding: 20px;
+    margin-top: 20px;
+
+
+    margin-bottom: 40px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.waypoints--item{
+        width: 300px;
+    
+        border-radius: 15px;
+    }
+
+    @media(max-width : 850px){
+        .add-btn{
+            width: 330px;
+        }
+    }
+
+    @media(max-width : 500px){
+
+        .add-btn{
+            font-size: 12px;
+            font-weight: normal;
+          }
+
+          .add-btn{
+            width: 230px;
+        }
+    }
