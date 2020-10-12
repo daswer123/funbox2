@@ -1,5 +1,4 @@
 import React from "react";
-import appHeader from "./appheader.css";
 
 const AppHeader = () => {
     return (

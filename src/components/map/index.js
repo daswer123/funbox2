@@ -19,7 +19,7 @@ const center = {
 //
 const Map = ({
     setWaypoint,currentWaypoint,waypoints,
-    addNewWaypoints , setPath, path,changeWaypointDestination}) => {
+    setPath, path,changeWaypointDestination}) => {
     
     //Создаём загрузку и проверям загрузку на ошибку
     const { isLoaded, loadError } = useLoadScript({

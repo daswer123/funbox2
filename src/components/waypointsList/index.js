@@ -7,8 +7,8 @@ import "./waypointList.css";
 
 const WayPointList = ({waypoints,replaceWaypoints}) => {
     
+    // Как только мы перетащили элемент на новое место, то меняется порядок
     const onDragEnd = (res) => {
-        console.log(res)
         replaceWaypoints({
             id : +res.draggableId,
             indexFrom : res.source.index,
@@ -16,6 +16,7 @@ const WayPointList = ({waypoints,replaceWaypoints}) => {
         })
     }
 
+    // Оборачиваем список в Drag and Drop обёртку
     return (
         <DragDropContext onDragEnd={(res) => onDragEnd(res)}>
             <Droppable droppableId={"waypoints-lists"}>

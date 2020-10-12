@@ -1,5 +1,3 @@
-import { setWaypoint } from "../actions"
-
 const initialState = {
     waypoints : [],
     currentWaypoint : {
@@ -84,7 +82,6 @@ function reducer (state = initialState,action){
             }
 
         case "REPLACE_WAYPOINT":
-
             const {indexFrom,indexTo} = action.payload;
 
             console.log(indexFrom, indexTo)

@@ -21,6 +21,7 @@ const WaypointItem = ({title,id,index,deleteWaypoint, changeTitle}) => {
         setnewTitle(e.target.value)
     }
 
+
     const setNewTitle = (e) => {
         e.preventDefault();
 
@@ -37,6 +38,7 @@ const WaypointItem = ({title,id,index,deleteWaypoint, changeTitle}) => {
         changeTitle(id, newTitle)
     }
 
+    // Переключаем название на форму редактирования и наооборот
     const titleView = editMode ?
     <form onSubmit={(e) => setNewTitle(e)} className="change-title--form">
         <input 
@@ -50,6 +52,7 @@ const WaypointItem = ({title,id,index,deleteWaypoint, changeTitle}) => {
      :
      <p>{title}</p>;
 
+    // Подключаем библеотеку для Drag and Drop , оборачиваем наш элемент и добавляем нужные свойства
     return (
         <Draggable draggableId={`${id}`} index={index}>
             {(provided) => {
