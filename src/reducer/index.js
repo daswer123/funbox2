@@ -86,17 +86,43 @@ function reducer (state = initialState,action){
         case "REPLACE_WAYPOINT":
 
             const {indexFrom,indexTo} = action.payload;
-            // Меняем местами тот элемент который мы взяли на тот, на который мы навились элементом. Не густо конечно же , но по тз всё ок
-            const temp = {...state.waypoints[indexFrom]}
-            const newReplacedArray = [...state.waypoints];
 
-            newReplacedArray[indexFrom] = {...newReplacedArray[indexTo]};
-            newReplacedArray[indexTo] = temp;
+            console.log(indexFrom, indexTo)
 
+            let  newArray = [...state.waypoints];
+            let temp = {};
+
+            // Правильная сортировка точек
+            if ( indexFrom < indexTo) {  // Сверху вниз
+                const editedArray = state.waypoints.slice(indexFrom,indexTo + 1);
+                temp = editedArray[0];
+
+                editedArray.shift()
+                editedArray.push(temp);
+
+                newArray = [
+                    ...state.waypoints.slice(0,indexFrom),
+                    ...editedArray,
+                    ...state.waypoints.slice(indexTo + 1)
+                ]
+
+            } else { // Снизу вверх
+                const editedArray = state.waypoints.slice(indexTo,indexFrom + 1);
+                temp = editedArray[editedArray.length - 1];
+
+                editedArray.pop();
+                editedArray.unshift(temp)
+
+                newArray = [
+                    ...state.waypoints.slice(0,indexTo),
+                    ...editedArray,
+                    ...state.waypoints.slice(indexFrom + 1)
+                ]
+            }
 
             return {
                 ...state,
-                waypoints : [...newReplacedArray],
+                waypoints : [...newArray],
                 path : ""
             }
         default:

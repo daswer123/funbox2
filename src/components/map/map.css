@@ -1,8 +1,17 @@
 .map{
-    width: 800px;
+    width: 1000px;
     height: 96vh;
 
     border-radius: 15px;
+}
+
+@media(max-width : 1600px){
+    .map{
+        width: 800px;
+        height: 96vh;
+    
+        border-radius: 15px;
+    }
 }
 
 @media(max-width : 1300px){

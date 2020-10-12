@@ -21,7 +21,7 @@ const Map = ({
     
     //Создаём загрузку и проверям загрузку на ошибку
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "AIzaSyBKMXwtVcDWplDAb16jNGJ0H2yYoR9Q11k",
+        googleMapsApiKey : "AIzaSyD6-lNhd5SHFeIZM6DKpLlj1f6U2KdYXbQ",
         libraries
     });
 
